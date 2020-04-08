@@ -128,9 +128,9 @@ var collectionList = [
             {
                 display: "Radiant Rennaissance",
                 artefacts: [
+                    "'The Pride of Padosan' painting",
                     "'Hallowed Be the Everlight' painting",
-                    "'The Lord of LIght' painting",
-                    "'The Pride of Padosan' painting"
+                    "'The Lord of Light' painting",
                 ]
             },
             {
@@ -204,10 +204,10 @@ var collectionList = [
             {
                 display: "Red Rum Relics II",
                 artefacts: [
-                     "Hobgoblin mansticker",
                      "Ourg megahitter",
                      "Ourg tower/goblin cower shield",
-                     "'Forged in War' sculpture"
+                     "'Forged in War' sculpture",
+                     "Hobgoblin mansticker"
                 ]
             },
             {
@@ -275,52 +275,52 @@ var collectionList = [
             {
                 display: "Hat Problem",
                 artefacts: [
-                    "Beastkeeper helm",
                     "Imp mask",
                     "Ekeleshuun blinder mask",
-                    "Flat cap",
                     "High priest mitre",
+                    "Beastkeeper helm",
                     "Huzamogaarb chaos crown",
+                    "Flat cap",
                     "Praetorian hood"
                 ]
             },
             {
                 display: "Hat Hoarder",
                 artefacts: [
-                    "Ceremonial unicorn ornament",
                     "Lesser demon mask",
                     "Greater demon mask",
-                    "Kal-i-kran chieftain crown",
+                    "Ceremonial unicorn ornament",
                     "Pontifex mitre",
                     "Saragorgak star crown",
+                    "Kal-i-kran chieftain crown",
                     "Tsutsaroth helm"
                 ]
             },
             {
                 display: "Magic Man",
                 artefacts: [
-                    "Ancient timepiece",
-                    "Chuluu stone",
-                    "High priest mitre",
                     "Legatus Maximus figurine",
-                    "Portable phylactery",
                     "Ritual dagger",
-                    "'Animate Dead' spell scroll",
-                    "'Exsanguinate' spell scroll",
+                    "Ancient timepiece",
                     "'Incite Fear' spell scroll",
-                    "'Smoke Cloud' spell scroll"
+                    "'Exsanguinate' spell scroll",
+                    "High priest mitre",
+                    "'Smoke Cloud' spell scroll",
+                    "Portable phylactery",
+                    "'Animate Dead' spell scroll",
+                    "Chuluu stone"
                 ]
             },
             {
                 display: "Knowledge is Power",
                 artefacts: [
                     "Crest of Dagon",
-                    "Golem instruction",
-                    "Necromantic focus",
                     "Ikovian gerege",
+                    "Necromantic focus",
+                    "Golem instruction",
                     "'The Enlightened Soul' scroll",
-                    "'Da Boss Man' sculpture",
-                    "'The Eudoxian Elements' tablet"
+                    "'The Eudoxian Elements' tablet",
+                    "'Da Boss Man' sculpture"
                 ]
             }
         ]
