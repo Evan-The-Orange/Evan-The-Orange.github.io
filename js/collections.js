@@ -246,11 +246,11 @@ var collectionList = [
             },
             {
                 display: "Green Gobbo Goodies III",
-                artefacts: [
-                    "Huzamogaarb chaos crown", 
+                artefacts: [ 
+                    "Dorgeshuun spear",
+                    "Huzamogaarb chaos crown",
                     "Saragorgak star crown",
                     "Drogokishuun hook sword", 
-                    "Dorgeshuun spear",
                     "Horogothgar cooking pot", 
                     "'Da Boss Man' sculpture"
                 ]
