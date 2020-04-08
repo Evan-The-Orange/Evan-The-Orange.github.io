@@ -44,7 +44,7 @@ var collectionList = [
             },
             {
                 number: "IV",
-                display: "Zamorakian IV - 116",
+                display: "Zamorakian IV - (116)",
                 artefacts: []
             }
         ]
