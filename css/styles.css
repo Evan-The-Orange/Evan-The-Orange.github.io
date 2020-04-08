@@ -140,11 +140,20 @@ body {
 }
 
 
-#statform label, #statform input, #yourLevel {
+#statform label.inline, #statform input, #yourLevel {
     display:inline-block;
     width:32%;
     text-align:center;
 }
+
+.outfitbox {
+    text-align:center;
+    margin-top:10px;
+}
+
+    .outfitbox input {
+        width:auto !important;
+    }
 
 .highlight {
     position:absolute;
