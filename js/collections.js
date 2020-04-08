@@ -235,7 +235,7 @@ var collectionList = [
                 ]
             },
             {
-                display: "Green Gobbo Goodies II = (97)",
+                display: "Green Gobbo Goodies II - (97)",
                 artefacts: [
                     "High priest crozier", 
                     "High priest mitre",
