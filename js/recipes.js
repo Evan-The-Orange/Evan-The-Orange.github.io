@@ -399,7 +399,7 @@ var recipes = [
         new Material("White oak", 12),
         new Material("Samite silk", 12),
         new Material("Vellum", 12),
-        new Material("Cadmium red")
+        new Material("Cadmium red", 42)
     ], "Zamorakian III", 3),
     new Recipe("'Torment' metal sculpture", 89, 10500.0, [
         new Material("Eye of Dagon", 20),

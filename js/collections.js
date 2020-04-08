@@ -195,16 +195,16 @@ var collectionList = [
             {
                 display: "Red Rum Relics I",
                 artefacts: [
-                    "Ork cleaver sword",
                     "Ogre Kyzaj axe",
+                    "Ork cleaver sword",
                     "Beastkeeper helm",
-                    "'Nosorog!' sculpture"
+                    "'Nosorog!' sculpture",
                 ]
             },
             {
-                display: "Red Rum Relics",
+                display: "Red Rum Relics II",
                 artefacts: [
-                    "Hobgoblin mansticker",
+                     "Hobgoblin mansticker",
                      "Ourg megahitter",
                      "Ourg tower/goblin cower shield",
                      "'Forged in War' sculpture"
@@ -347,8 +347,11 @@ function highlight(artefact) {
     var div = $(".artefact").filter(function () {
         return $(this).data("artefact") == artefact;
     });
-    
+
     var top = div.offset().top;
+
+    console.log("highlighting " + artefact +" with top pos: ");
+    console.log(top);
 
     div.addClass("highlight").css("top", top);
 }
