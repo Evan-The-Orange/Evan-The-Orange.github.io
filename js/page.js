@@ -183,6 +183,13 @@ $(document).ready(function() {
         checkCollections();
         saveData();
     });
+
+    $("#reset").click(function() {
+        $(".artefactinput").val(0);
+        $(".artefactpotential").text("0.0");
+        update();
+        calculateTotalPotentialXP();
+    })
 });
 
 function update(artefact, number, ignoreSave = false) {
