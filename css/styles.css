@@ -156,11 +156,7 @@ body {
     }
 
 .highlight {
-    position:absolute;
-    background-color:yellow;
-    color:black;
-    width:102%;
-    margin-left:-1%;
+    
 }
 
 #collections {

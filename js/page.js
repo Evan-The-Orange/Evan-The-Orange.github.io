@@ -241,6 +241,16 @@ function calculateTotalMaterials() {
             }
         }
     });
+
+    
+
+    $(".material").each(function() {
+        if($(this).find(".materialamount").text() == "0") {
+            $(this).hide();
+        } else {
+            $(this).show();
+        }
+    });
 }
 
 function calculateTotalPotentialXP() {
