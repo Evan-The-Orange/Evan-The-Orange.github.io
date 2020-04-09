@@ -6,6 +6,6 @@ $(document).ready(function() {
         }
     }).done(function(res) {
         console.log(res);
-    })
+    });
 
 });
