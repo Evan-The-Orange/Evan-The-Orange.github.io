@@ -156,7 +156,7 @@ body {
     }
 
 .highlight {
-    
+
 }
 
 #collections {
@@ -187,4 +187,9 @@ body {
     cursor:pointer;
     font-size:20px;
     margin-top:-6px;
+}
+
+.unneeded {
+    background-color:#00bf29c9;
+    text-decoration: line-through;
 }

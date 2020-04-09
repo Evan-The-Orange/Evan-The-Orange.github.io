@@ -385,7 +385,6 @@ function highlightCollection(collection) {
         for(x in collectionList[i].collections) {
             if(collectionList[i].collections[x].display == collection) {
                 for(y in collectionList[i].collections[x].artefacts) {
-                    console.log("Highlighting " + collectionList[i].collections[x].artefacts[y]);
                     highlight(collectionList[i].collections[x].artefacts[y]);
                 }
             }
@@ -433,7 +432,7 @@ function highlightCollection(collection) {
     })*/
 }
 
-function checkCollections() {
+/*function checkCollections() {
     for (var i = 0; i < collectionList.length; i++) {
         for (var x = 0; x < collectionList[i].collections.length; x++) {
             var collectionComplete = true;
@@ -464,4 +463,4 @@ function checkCollections() {
             }
         }
     }
-}
+}*/
