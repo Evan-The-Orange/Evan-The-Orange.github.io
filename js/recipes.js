@@ -367,7 +367,7 @@ var recipes = [
     new Recipe("Yurkolgokh stink grenade", 83, 8166.7, [
         new Material("Yu'biusk clay", 38),
         new Material("Vulcanised rubber", 36),
-        new Material("Weapon poison (3)")
+        new Material("Weapon poison (3)", 1)
     ], "Bandosian I"),
     new Recipe("Dominarian device", 84, 8555.6, [
         new Material("Everlight silvthril", 30),
