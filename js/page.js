@@ -91,11 +91,13 @@ $(document).ready(function () {
             )
         );
 
+        var imgObj2 = imgObj;
+
         $("#materialStorage").append(
             $("<div/>", {
                 class: "popupMaterial"
             })
-            .append(imgObj)
+            .append(imgObj.clone())
             .append(
                 $("<div/>", {
                     class: "materialStorageInput"
@@ -301,7 +303,7 @@ function calculateTotalMaterials() {
                 var actualAmountNeeded = numNeeded - numberInStorage;
     
                 //$amountNeeded.text(actualAmountNeeded + " (Total: " + numNeeded + ")");
-                if(actualAmountNeeded < 0) {
+                if(actualAmountNeeded <= 0) {
                     actualAmountNeeded = 0;
                     $material.addClass("unneeded");
                 } else {
