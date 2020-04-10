@@ -90,6 +90,31 @@ $(document).ready(function () {
                 })
             )
         );
+
+        $("#materialStorage").append(
+            $("<div/>", {
+                class: "popupMaterial"
+            })
+            .append(imgObj)
+            .append(
+                $("<div/>", {
+                    class: "materialStorageInput"
+                })
+                .append(
+                    $("<label/>", {
+                        text: mat
+                    })
+                )
+                .append(
+                    $("<input/>", {
+                        type: "number",
+                        value: 0,
+                        data: { "materialstoragemat": mat}
+                    })
+                )
+            )
+            
+        );
     });
 
     collectionList.forEach(function (cat) {
@@ -245,6 +270,7 @@ function calculateTotalMaterials() {
         var recipe = getRecipeByArtefact(artefact);
 
         if (numToMake > 0) {
+            var runningTotal = 0;
             for (i = 0; i < recipe.mats.length; i++) {
                 var mat = recipe.mats[i].name;
                 var numRequired = recipe.mats[i].numRequired;
@@ -254,15 +280,34 @@ function calculateTotalMaterials() {
                 }).find(".materialamount");
 
                 var currentNeeded = parseInt($numberNeeded.text().replace(/,/g, ""));
-
+                
                 $numberNeeded.text(currentNeeded + (numRequired * numToMake));
             }
         }
     });
 
-
-
+    
     $(".material").each(function () {
+        var mat = $(this).data("material");
+        var $amountNeeded = $(this).children(".materialamount");
+        var numNeeded = parseInt($amountNeeded.text());
+
+        if(numNeeded > 0) {
+            if(localStorage.getItem("materialstorage") !== null) {
+                var materialStorage = JSON.parse(localStorage.getItem("materialstorage"));
+                var numberInStorage = materialStorage[mat];
+    
+                var actualAmountNeeded = numNeeded - numberInStorage;
+    
+                //$amountNeeded.text(actualAmountNeeded + " (Total: " + numNeeded + ")");
+                if(actualAmountNeeded < 0) actualAmountNeeded = 0;
+                $amountNeeded.text(actualAmountNeeded + " (").append($("<b/>", { text: numNeeded })).append(")");
+            }
+        }        
+        
+
+
+
         if ($(this).find(".materialamount").text() == "0") {
             $(this).hide();
         } else {
@@ -297,6 +342,8 @@ function calculateTotalPotentialXP() {
     $("#endXP").text("Ending XP: " + numberWithCommas(parseInt(xp)));
     $("#endLvl").text("Ending lvl: " + lvl);
 }
+
+
 
 
 function saveData() {
@@ -392,4 +439,36 @@ function loadData() {
             })
         }
     }
+
+    if(localStorage.getItem("materialstorage") !== null) {
+        var storageData = JSON.parse(localStorage.getItem("materialstorage"));
+        
+        $(".materialStorageInput").each(function() {
+            var input = $(this).children("input");
+            var mat = input.data("materialstoragemat");
+
+            input.val(storageData[mat]);
+        })
+    }
 }
+
+function saveStorage() {
+    var materialStorage = {};
+    $(".materialStorageInput").each(function() {
+        var input = $(this).children("input");
+
+        var mat = input.data("materialstoragemat");
+        var amount = input.val();
+
+        materialStorage[mat] = amount;
+    })
+
+    localStorage.setItem("materialstorage", JSON.stringify(materialStorage));
+
+    $("#blinder").css("display", "none");
+    calculateTotalMaterials();
+}
+
+function showMaterialStorage() {
+    $("#blinder").css("display", "block");
+};

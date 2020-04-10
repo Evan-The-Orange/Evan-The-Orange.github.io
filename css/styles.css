@@ -191,3 +191,71 @@ body {
     background-color:#00bf29c9;
     text-decoration: line-through;
 }
+
+#blinder {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0,0,0, 0.6);
+    display:none;
+}
+
+#popup {
+    background: #AAA;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(calc(-50%));
+    outline:thin solid #CCC;
+}
+
+#materialStorage {    
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#popup span {
+    display:block;
+    text-align:center;
+    font-weight: bold;
+    font-size:24px;
+    padding:10px;
+}
+
+#popup .popupMaterial {
+    padding:10px;
+    outline:thin solid #CCC;
+}
+
+#popup .popupMaterial div:not([class]) {
+    display:inline-block;
+    text-align:center;
+    width:40px;
+}
+
+#popup .popupMaterial img {
+    height: 25px;
+}
+
+#popup .popupMaterial .materialStorageInput {
+    display:inline-block;
+}
+
+#popup .popupMaterial .materialStorageInput input {
+    display:block;
+    width:50px;
+}
+
+#popup .popupSave {
+    text-align:center;
+    padding:10px;
+}
+
+#showMaterialStorage {
+    display:block;
+    text-align:center;
+    margin:10px;
+    font-size:20px;
+}
