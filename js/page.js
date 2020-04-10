@@ -262,6 +262,12 @@ $(document).ready(function () {
             $(this).removeClass("unneeded");
         }
     });
+
+    $(".materialStorageInput input").change(function() {
+        if($(this).val() <= 0) {
+            $(this).val(0);
+        }
+    })
 });
 
 function update(artefact, number, ignoreSave = false) {
