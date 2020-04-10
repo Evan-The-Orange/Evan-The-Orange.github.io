@@ -304,6 +304,8 @@ function calculateTotalMaterials() {
                 if(actualAmountNeeded < 0) {
                     actualAmountNeeded = 0;
                     $material.addClass("unneeded");
+                } else {
+                    $material.removeClass("unneeded");
                 }
                 $amountNeeded.text(actualAmountNeeded + " (").append($("<b/>", { text: numNeeded })).append(")");
             }
