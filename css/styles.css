@@ -1,7 +1,6 @@
 body {
     margin:0;
     padding:0;
-    width:1080px;
     position:relative;
     margin:0 auto 0 auto;
     font-family: "Arial", sans-serif;
@@ -9,8 +8,8 @@ body {
 }
 
 #main {
-    width:100%;
-    float: left;
+    width:50%;
+    margin:0 auto;
     background:#1C1C1C;
     color:#FFF;
 }
