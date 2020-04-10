@@ -259,3 +259,11 @@ body {
     margin:10px;
     font-size:20px;
 }
+
+.seperator {
+    grid-column: 1/-1;
+}
+
+#materialStorage .seperator span {
+    font-size: 18px;
+}

@@ -353,28 +353,12 @@ function highlight(artefact) {
             }
         }
     });
-
-    /*var div = $(".artefact").filter(function () {
-        return $(this).data("artefact") == artefact;
-    });
-
-    var top = div.offset().top;
-
-    console.log("highlighting " + artefact +" with top pos: ");
-    console.log(top);
-
-    div.addClass("highlight").css("top", top);*/
 }
 
 function removeHighlights() {
     $(".collectionViewer").data("active", false);
     
     $(".artefact").show().removeClass("highlight");
-    
-    /*$(".highlight").each(function () {
-        $(this).nextUntil(".highlight", ".artefact:not(.highlight)").find(".cell").css("padding-top", "4px");
-        $(this).removeClass("highlight");
-    });*/
 }
 
 
@@ -390,77 +374,4 @@ function highlightCollection(collection) {
             }
         }
     }
-    
-    /*var artefacts;
-    for (i in collectionList) {
-        for (var x in collectionList[i].collections) {
-            if (collectionList[i].collections[x].display == collection) {
-                artefacts = collectionList[i].collections[x].artefacts;
-            }
-        }
-    }
-
-    for (i = artefacts.length - 1; i >= 0; i--) {
-        highlight(artefacts[i]);
-    }
-
-    /*var numHighlightsInARow = 0;
-
-    $(".highlight").each(function () {
-        var numAfterUntilHighlight = $(this).nextUntil(".highlight", ".artefact").length;
-        numHighlightsInARow += 1
-
-        //There are more than one non-highlighted artefacts after this highlight in a row, and this is not the last highlight
-        if (numAfterUntilHighlight > 0 && ($(this).index(".highlight") < $(this).siblings(".highlight").length)) {
-            var padding = parseInt($(this).outerHeight());
-
-            for (i = 0; i < numHighlightsInARow - 1; i++) {
-                padding += parseInt($(this).prevAll().eq(i).outerHeight());
-            }
-
-
-
-            $(this).next(".artefact").find(".cell").css("padding-top", (padding + 4) + "px");
-
-            numHighlightsInARow = 0;
-        } else if (($(this).index(".highlight") == $(this).siblings(".highlight").length)) {
-            //last highlight
-            var padding = 30 + (30 * $(this).prevUntil(".artefact:not(.highlight)").length);
-
-            $(this).next(".artefact").find(".cell").css("padding-top", padding + 4 + "px");
-        }
-    })*/
 }
-
-/*function checkCollections() {
-    for (var i = 0; i < collectionList.length; i++) {
-        for (var x = 0; x < collectionList[i].collections.length; x++) {
-            var collectionComplete = true;
-
-            for (var y = 0; y < collectionList[i].collections[x].artefacts.length; y++) {
-                var artefact = collectionList[i].collections[x].artefacts[y];
-                var toCheck = $(".minForCollections").filter(function () {
-                    return $(this).data("artefact-collection") == artefact;
-                });
-
-                if (!toCheck.hasClass("complete")) {
-                    collectionComplete = false;
-                }
-            }
-
-            if (collectionComplete) {
-                var collectionLabel = $(".collection").filter(function () {
-                    return $(this).data("collection") == collectionList[i].collections[x].display;
-                })
-
-                collectionLabel.addClass("complete");
-            } else {
-                var collectionLabel = $(".collection").filter(function () {
-                    return $(this).data("collection") == collectionList[i].collections[x].display;
-                })
-
-                collectionLabel.removeClass("complete");
-            }
-        }
-    }
-}*/

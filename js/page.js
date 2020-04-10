@@ -18,10 +18,19 @@ $(document).ready(function () {
 
         mats.forEach(function (mat) {
             var imgstr = mat.name.replace(/ /g, "_");
-            var imgObj = $("<img/>", {
-                src: "img/" + imgstr + ".webp",
-                title: mat.name + " x" + mat.numRequired
-            });
+            var imgObj;
+
+            if(imgstr == "Bronze_bar") {
+                imgObj = $("<img/>", {
+                    src: "img/" + imgstr + ".png",
+                    title: mat.name + " x" + mat.numRequired
+                });
+            } else {
+                imgObj = $("<img/>", {
+                    src: "img/" + imgstr + ".webp",
+                    title: mat.name + " x" + mat.numRequired
+                });
+            }
 
             img.append(imgObj);
         });
@@ -68,9 +77,17 @@ $(document).ready(function () {
 
     materialList.forEach(function (mat) {
         var imgstr = mat.replace(/ /g, "_");
-        var imgObj = $("<img/>", {
-            src: "img/" + imgstr + ".webp"
-        });
+        var imgObj;
+        if(imgstr == "Bronze_bar") {
+            imgObj = $("<img/>", {
+                src: "img/" + imgstr + ".png"
+            });
+        } else {
+            imgObj = $("<img/>", {
+                src: "img/" + imgstr + ".webp"
+            });
+        }
+        
 
         var imgObj = $("<div/>").append(imgObj);
 
@@ -91,7 +108,18 @@ $(document).ready(function () {
             )
         );
 
-        var imgObj2 = imgObj;
+        if(mat == "Sapphire") {
+            $("#materialStorage").append(
+                $("<div/>", {
+                    class:"seperator"
+                })
+                .append(
+                    $("<span/>", {
+                        text: "Secondary Materials"
+                    })
+                )
+            );
+        }
 
         $("#materialStorage").append(
             $("<div/>", {
@@ -115,7 +143,6 @@ $(document).ready(function () {
                     })
                 )
             )
-            
         );
     });
 
@@ -299,6 +326,10 @@ function calculateTotalMaterials() {
             if(localStorage.getItem("materialstorage") !== null) {
                 var materialStorage = JSON.parse(localStorage.getItem("materialstorage"));
                 var numberInStorage = materialStorage[mat];
+
+                if (numberInStorage == null) {
+                    numberInStorage = 0;
+                }
     
                 var actualAmountNeeded = numNeeded - numberInStorage;
     
@@ -455,7 +486,12 @@ function loadData() {
             var input = $(this).children("input");
             var mat = input.data("materialstoragemat");
 
-            input.val(storageData[mat]);
+            if(storageData[mat] != null) {
+                input.val(storageData[mat]);
+            } else {
+                input.val(0);
+            }
+            
         })
     }
 }
@@ -467,6 +503,9 @@ function saveStorage() {
 
         var mat = input.data("materialstoragemat");
         var amount = input.val();
+        if(amount == null) {
+            amount = 0;
+        }
 
         materialStorage[mat] = amount;
     })
