@@ -288,7 +288,8 @@ function calculateTotalMaterials() {
 
     
     $(".material").each(function () {
-        var mat = $(this).data("material");
+        var $material = $(this);
+        var mat = $material.data("material");
         var $amountNeeded = $(this).children(".materialamount");
         var numNeeded = parseInt($amountNeeded.text());
 
@@ -300,7 +301,10 @@ function calculateTotalMaterials() {
                 var actualAmountNeeded = numNeeded - numberInStorage;
     
                 //$amountNeeded.text(actualAmountNeeded + " (Total: " + numNeeded + ")");
-                if(actualAmountNeeded < 0) actualAmountNeeded = 0;
+                if(actualAmountNeeded < 0) {
+                    actualAmountNeeded = 0;
+                    $material.addClass("complete");
+                }
                 $amountNeeded.text(actualAmountNeeded + " (").append($("<b/>", { text: numNeeded })).append(")");
             }
         }        
