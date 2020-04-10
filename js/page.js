@@ -303,7 +303,7 @@ function calculateTotalMaterials() {
                 //$amountNeeded.text(actualAmountNeeded + " (Total: " + numNeeded + ")");
                 if(actualAmountNeeded < 0) {
                     actualAmountNeeded = 0;
-                    $material.addClass("complete");
+                    $material.addClass("unneeded");
                 }
                 $amountNeeded.text(actualAmountNeeded + " (").append($("<b/>", { text: numNeeded })).append(")");
             }
