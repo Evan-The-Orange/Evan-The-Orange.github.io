@@ -147,7 +147,7 @@ var collectionList = [
         alignment: "Chief Tess",
         collections: [
             {
-                display: "Blingy Fings - (61)",
+                display: "Blingy Fings - (69)",
                 artefacts: [
                     "Ancient timepiece",
                     "Legatus pendant",
