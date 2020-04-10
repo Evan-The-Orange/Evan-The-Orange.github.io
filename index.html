@@ -32,10 +32,11 @@
 
 
     <div id="sidebar">
+        <a id="showMaterialStorage" href="javascript:showMaterialStorage();">Manage Material Storage</a>
         <div id="materials">
             <div class="materiallistheader">
                 <span class="cell">Material</span>
-                <span class="cell">Needed</span>
+                <span class="cell">Needed (total)</span>
             </div>
         </div>
     </div>
@@ -64,6 +65,19 @@
 
         <div id="collections">
 
+        </div>
+    </div>
+
+    <div id="blinder">
+        <div id="popup">
+            <span>Material Storage</span>
+            <div id="materialStorage">
+
+            </div>
+
+            <div class="popupSave">
+                <button onclick="saveStorage();">Save Storage</button>
+            </div>
         </div>
     </div>
 </body>
