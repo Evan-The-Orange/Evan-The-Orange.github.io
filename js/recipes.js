@@ -311,7 +311,7 @@ var recipes = [
     new Recipe("Ceremonial plume", 81, 7388.9, [
         new Material("Armadylean yellow", 38),
         new Material("Goldrune", 34),
-        new Material("Phoenix feather")
+        new Material("Phoenix feather", 1)
     ], "Armadylean I", 3),
     new Recipe("Peacocking parasol", 81, 7388.9, [
         new Material("Armadylean yellow", 22),
