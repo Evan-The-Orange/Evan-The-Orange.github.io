@@ -465,7 +465,7 @@ var recipes = [
     new Recipe("'Nosorog!' sculpture", 94, 13333.3, [
         new Material("Yu'biusk clay", 30),
         new Material("Malachite green", 24),
-        new Material("Soapstone", 30)
+        new Material("Warforged bronze", 30)
     ], "Bandosian II"),
     new Recipe("Stormguard gerege", 95, 14166.7, [
         new Material("Stormguard steel", 36),
