@@ -565,7 +565,7 @@ var recipes = [
         new Material("Third Age iron", 34),
         new Material("Star of Saradomin", 20)
     ], "Bandosian III", 3),
-    new Recipe("'Possesion' metal sculpture", 104, 23333.3, [
+    new Recipe("'Possession' metal sculpture", 104, 23333.3, [
         new Material("Eye of Dagon", 24),
         new Material("Chaotic brimstone", 30),
         new Material("Third Age iron", 44)
@@ -575,7 +575,7 @@ var recipes = [
         new Material("Eye of Dagon", 30),
         new Material("Third Age iron", 20)
     ], "Zamorakian IV"),
-    new Recipe("Tsutaroth piercing", 104, 23333.3, [
+    new Recipe("Tsutsaroth piercing", 104, 23333.3, [
         new Material("Hellfire metal", 44),
         new Material("Chaotic brimstone", 30),
         new Material("Cadmium red", 24)
@@ -700,12 +700,12 @@ var recipes = [
         new Material("Eye of Dagon", 40),
         new Material("Goldrune", 40)
     ], "Zamorakian IV", 3),
-    new Recipe("Tsusaroth pauldron", 116, 40000, [
+    new Recipe("Tsutsaroth pauldron", 116, 40000, [
         new Material("Hellfire metal", 40),
         new Material("Goldrune", 50),
         new Material("Eye of Dagon", 40)
     ], "Zamorakian IV"),
-    new Recipe("Tustsaroth urumi", 116, 40000, [
+    new Recipe("Tsutsaroth urumi", 116, 40000, [
         new Material("Hellfire metal", 50),
         new Material("Eye of Dagon", 40),
         new Material("Third Age iron", 40)
@@ -724,7 +724,7 @@ var recipes = [
         new Material("Soapstone", 40),
         new Material("Goldrune", 24)
     ], "Armadylean III", 3),
-    new Recipe("Quinessence counter", 118, 43333.3, [
+    new Recipe("Quintessence counter", 118, 43333.3, [
         new Material("Quintessence", 54),
         new Material("Stormguard steel", 40),
         new Material("White oak", 40)

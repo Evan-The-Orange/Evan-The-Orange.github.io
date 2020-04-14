@@ -40,14 +40,25 @@ $(document).ready(function () {
             text: recipe.minForCollection
         }).data("artefact-collection", recipe.artefact));
 
+
+        var artefactImg = $("<div/>", {
+            class: "artefactImg"
+        }).append(
+            $("<img/>", {
+                src: "img/artefacts/" + recipe.artefact.replace(/ /g, "_").replace(/\//g, "-") + ".webp"
+            }
+        ));
+
         $("#artefacts").append(
             $("<div/>", {
                 class: "artefact " + recipe.alignment
             }).data("artefact", recipe.artefact).append(
                 $("<span/>", {
                     class: "cell",
-                    text: recipe.artefact
-                }).append(img)
+                })
+                .prepend($("<span/>", {text: recipe.artefact}))
+                .prepend(artefactImg)
+                .append(img)
             ).append(
                 $("<span/>", {
                     class: "cell",
@@ -183,7 +194,6 @@ $(document).ready(function () {
 
     createCollections();
     loadData();
-    //checkCollections();
     update();
 
     $(".collectionViewer").click(function (e) {
@@ -238,10 +248,14 @@ $(document).ready(function () {
     });
 
     $("#reset").click(function () {
-        $(".artefactinput").val(0);
-        $(".artefactpotential").text("0.0");
-        update();
-        calculateTotalPotentialXP();
+        var reset = confirm("Reset all artefact counts to 0?");
+
+        if(reset) {
+            $(".artefactinput").val(0);
+            $(".artefactpotential").text("0.0");
+            update();
+            calculateTotalPotentialXP();
+        }
     })
 
     $(".collection").click(function () {
@@ -267,7 +281,74 @@ $(document).ready(function () {
         if($(this).val() <= 0) {
             $(this).val(0);
         }
-    })
+    });
+
+    $("#blinder").click(function(e) {
+        if(e.target == this) {
+            saveStorage();
+        }
+    });
+
+    $("#searchBox").on("keyup search", function() {
+        removeHighlights();
+        var str = $(this).val().toLowerCase();
+
+        if(str.indexOf("digsite:") > -1) {
+            console.log("Searching digsites");
+            if(str.indexOf("zaros") > -1) {
+                for(i in recipes) {
+                    var recipe = recipes[i];
+
+                    if(recipe.alignment.indexOf("Zarosian") > -1) {
+                        highlight(recipe.artefact);
+                    }
+                    
+                }
+            } else if(str.indexOf("zamorak") > -1) {
+                for(i in recipes) {
+                    var recipe = recipes[i];
+
+                    if(recipe.alignment.indexOf("Zamorakian") > -1) {
+                        highlight(recipe.artefact);
+                    }
+                    
+                }
+            } else if(str.indexOf("saradomin") > -1) {
+                for(i in recipes) {
+                    var recipe = recipes[i];
+
+                    if(recipe.alignment.indexOf("Saradominist") > -1) {
+                        highlight(recipe.artefact);
+                    }
+                    
+                }
+            } else if(str.indexOf("armadyl") > -1) {
+                for(i in recipes) {
+                    var recipe = recipes[i];
+
+                    if(recipe.alignment.indexOf("Armadylean") > -1) {
+                        highlight(recipe.artefact);
+                    }
+                }
+            } else if(str.indexOf("bandos") > -1) {
+                for(i in recipes) {
+                    var recipe = recipes[i];
+
+                    if(recipe.alignment.indexOf("Bandosian") > -1) {
+                        highlight(recipe.artefact);
+                    }
+                    
+                }
+            }
+        } else {
+            for(i in recipes) {
+                var recipe = recipes[i].artefact;
+                if(recipe.toLowerCase().indexOf(str) > -1) {
+                    highlight(recipe);
+                }
+            }
+        }
+    });
 });
 
 function update(artefact, number, ignoreSave = false) {

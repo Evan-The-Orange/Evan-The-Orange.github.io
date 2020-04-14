@@ -36,6 +36,8 @@ body {
             width:10%;
             outline:thin solid #CCC;
             padding:4px;
+            vertical-align:middle;
+            position:relative;
         }
 
             .cell .mats {
@@ -52,9 +54,10 @@ body {
                         height:15px;
                     }
 
-                .cell .mats img {
+                .artefact .cell .mats img {
                     height:17px;
                     margin:0 2px;
+                    vertical-align: middle;
                 }
 
         .artefact .cell:first-child {
@@ -127,9 +130,10 @@ body {
     border-radius:2px;
     margin-left:5px;
     cursor: pointer;
+    font-size:14px;
 }
 
-.minForCollections:hover {
+.minForCollections:not(.complete):hover {
     background-color:#BBB;
 }
 
@@ -160,7 +164,7 @@ body {
 #collections {
     margin-top:10px;
     padding:10px;
-    height:75%;
+    height:70%;
     overflow-y:auto;
 }
 
@@ -178,6 +182,11 @@ body {
 .collection {
     padding:5px;
     border-bottom:thin solid #1c1c1c;
+    cursor:pointer;
+}
+
+.collection:not(.complete):hover {
+    background-color:#CCC;
 }
 
 .collectionViewer {
@@ -200,6 +209,7 @@ body {
     right:0;
     background: rgba(0,0,0, 0.6);
     display:none;
+    overflow:auto;
 }
 
 #popup {
@@ -210,11 +220,13 @@ body {
     transform: translateX(-50%) translateY(calc(-50%));
     border:thin solid #CCC;
     border-radius:10px;
+    overflow: auto;
 }
 
 #materialStorage {    
     display:grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 195px 195px 195px 195px 195px;
+    font-size:14px;
 }
 
 #popup span {
@@ -267,4 +279,23 @@ body {
 
 #materialStorage .seperator span {
     font-size: 18px;
+}
+
+.artefact .cell img {
+    height:20px;
+    vertical-align: middle;
+}
+
+.artefact .cell div.artefactImg {
+    display:inline-block;
+    width:30px;
+    text-align:center;
+}
+
+.material {
+    cursor:pointer;
+}
+
+.material:not(.unneeded):hover {
+    background-color:#BBB;
 }
