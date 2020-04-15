@@ -525,7 +525,7 @@ var recipes = [
     ], "Bandosian II"),
     new Recipe("'Forged in War' sculpture", 100, 18666.7, [
         new Material("Warforged bronze", 50),
-        new Material("Yu'biusk clay"),
+        new Material("Yu'biusk clay", 42),
         new Material("Emerald", 1)
     ], "Bandosian II"),
     new Recipe("Kopis dagger", 100, 18666.7, [
