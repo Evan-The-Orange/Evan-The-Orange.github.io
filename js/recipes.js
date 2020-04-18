@@ -544,7 +544,7 @@ var recipes = [
     new Recipe("Vigorem vial", 100, 18666.7, [
         new Material("Imperial steel", 54),
         new Material("Ancient vis", 38),
-        new Material("Molten glass")
+        new Material("Molten glass", 1)
     ], "Zarosian III"),
     new Recipe("Blackfire lance", 103, 22166.7, [
         new Material("Aetherium alloy", 50),
