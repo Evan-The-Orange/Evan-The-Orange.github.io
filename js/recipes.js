@@ -529,7 +529,7 @@ var recipes = [
         new Material("Emerald", 1)
     ], "Bandosian II"),
     new Recipe("Kopis dagger", 100, 18666.7, [
-        new Material("Everlight silvthril", 100),
+        new Material("Everlight silvthril", 50),
         new Material("Leather scraps", 42)
     ], "Saradominist III"),
     new Recipe("Xiphos short sword", 100, 18666.7, [
