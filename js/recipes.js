@@ -569,17 +569,17 @@ var recipes = [
         new Material("Eye of Dagon", 24),
         new Material("Chaotic brimstone", 30),
         new Material("Third Age iron", 44)
-    ], "Zamorakian IV"),
+    ], "Zamorakian III"),
     new Recipe("Trishula", 104, 23333.3, [
         new Material("Hellfire metal", 48),
         new Material("Eye of Dagon", 30),
         new Material("Third Age iron", 20)
-    ], "Zamorakian IV"),
+    ], "Zamorakian III"),
     new Recipe("Tsutsaroth piercing", 104, 23333.3, [
         new Material("Hellfire metal", 44),
         new Material("Chaotic brimstone", 30),
         new Material("Cadmium red", 24)
-    ], "Zamorakian IV"),
+    ], "Zamorakian III"),
     new Recipe("'The Pride of Padosan' painting", 105, 24500, [
         new Material("Cobalt blue", 52),
         new Material("White oak", 16),
@@ -633,12 +633,12 @@ var recipes = [
         new Material("Chaotic brimstone", 52),
         new Material("White oak", 50),
         new Material("Hellfire metal", 30)
-    ], "Zamorakian III"),
+    ], "Zamorakian IV"),
     new Recipe("Virius trophy", 110, 31000, [
         new Material("Demonhide", 44),
         new Material("White oak", 34),
         new Material("Orthenglass", 34)
-    ], "Zamorakian III"),
+    ], "Zamorakian IV"),
     new Recipe("Flat cap", 111, 32333.3, [
         new Material("Armadylean yellow", 60),
         new Material("Samite silk", 54)
