@@ -39,7 +39,7 @@ var collectionList = [
             },
             {
                 number: "III",
-                display: "Zamorakian III - (110)",
+                display: "Zamorakian III - (104)",
                 artefacts: []
             },
             {
