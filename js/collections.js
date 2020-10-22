@@ -115,6 +115,31 @@ var collectionList = [
         ]
     },
     {
+        alignment: "Dragonkin",
+        collections: [
+            {
+                number: "I",
+                display: "Dragonkin I - (99)",
+                artefacts: []
+            },
+            {
+                number: "II",
+                display: "Dragonkin II - (102)",
+                artefacts: []
+            },
+            {
+                number: "III",
+                display: "Dragonkin III - (108)",
+                artefacts: []
+            },
+            {
+                number: "IV",
+                display: "Dragonkin IV - (120)",
+                artefacts: []
+            }
+        ]
+    },
+    {
         alignment: "Art Critic Jacques",
         collections: [
             {
@@ -331,7 +356,7 @@ function createCollections() {
     for (i = 0; i < collectionList.length; i++) {
         var category = collectionList[i];
 
-        if (category.alignment == "Zarosian" || category.alignment == "Zamorakian" || category.alignment == "Saradominist" || category.alignment == "Armadylean" || category.alignment == "Bandosian") {
+        if (category.alignment == "Zarosian" || category.alignment == "Zamorakian" || category.alignment == "Saradominist" || category.alignment == "Armadylean" || category.alignment == "Bandosian" || category.alignment == "Dragonkin") {
             for (x in category.collections) {
                 $(".artefact").each(function () {
                     if ($(this).hasClass(category.alignment) && $(this).hasClass(category.collections[x].number)) {

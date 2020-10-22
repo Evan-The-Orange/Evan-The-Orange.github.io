@@ -105,6 +105,10 @@ body {
     background-color: #96AD45;
 }
 
+.Dragonkin {
+    background-color: #494343;
+}
+
 #statform {
     padding:10px;
 }
@@ -144,7 +148,7 @@ body {
 
 #statform label.inline, #statform input, #yourLevel {
     display:inline-block;
-    width:32%;
+    width:30%;
     text-align:center;
 }
 
