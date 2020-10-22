@@ -651,7 +651,7 @@ var recipes = [
     new Recipe("Meditation pipe", 106, 25666.7, [
         new Material("Orgone", 60),
         new Material("Dragon metal", 40)
-    ], "Dragonkin "),
+    ], "Dragonkin III"),
     new Recipe("Personal totem", 106, 25666.7, [
         new Material("Orgone", 48),
         new Material("Carbon black", 26),
