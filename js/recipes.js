@@ -848,7 +848,7 @@ var recipes = [
         new Material("Orgone", 44),
         new Material("Felt", 42)
     ], "Dragonkin IV"),
-    new Recipe("'Raksha' Idol", 120, 46666.7, [
+    new Recipe("'Raksha' idol", 120, 46666.7, [
         new Material("Orgone", 56),
         new Material("Dragon metal", 44),
         new Material("Goldrune", 40)
@@ -872,6 +872,3 @@ function getMatsByArtefact(artefact) {
 
     return recipe.mats;
 }
-
-
-//TODO: Add collections?
