@@ -468,7 +468,7 @@ function calculateTotalPotentialXP() {
     var remainingXP = levels[i+1] - xp;
 
     $("#endXP").text("Ending XP: " + numberWithCommas(parseInt(xp)));
-    $("#endLvl").text("Ending lvl: " + lvl + "(" + remainingXP) + " to " + lvl + 1 + ")");
+    $("#endLvl").text("Ending lvl: " + lvl + "(" + numberWithCommas(parseInt(remainingXP)) + " to " + lvl + 1 + ")");
 }
 
 
